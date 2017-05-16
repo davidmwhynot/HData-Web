@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>New Game</title>
+		<link rel="stylesheet" href="index.css" media="(min-width: 700px)">
+	</head>
+	<body class="index">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="script.js"></script>
+		<h1>HData (Placeholder for Image Header)</h1>
+		<div class="nav">
+			<a href="index.php">Home</a>
+			<a href="newgame.php">New Game</a>
+			<a href="stats.php">Stats</a>
+			<a href="decks.php">Decks</a>
+			<a href="about.php">About</a>
+		</div>
+		<div class="main">
+			<form action="newGame.php" method="POST">
+				<p>
+					Your Class:
+					<select name="userClass" id="userClassjs">
+						<option value="userDruid">Druid</option>
+						<option value="userHunter">Hunter</option>
+						<option value="userMage">Mage</option>
+						<option value="userPaladin">Paladin</option>
+						<option value="userPriest">Priest</option>
+						<option value="userRogue">Rogue</option>
+						<option value="userShaman">Shaman</option>
+						<option value="userWarlock">Warlock</option>
+						<option value="userWarrior">Warrior</option>
+					</select>
+				
+					Opponent Class:
+					<select name="oppClass" id="oppClassjs">
+						<option value="oppDruid">Druid</option>
+						<option value="oppHunter">Hunter</option>
+						<option value="oppMage">Mage</option>
+						<option value="oppPaladin">Paladin</option>
+						<option value="oppPriest">Priest</option>
+						<option value="oppRogue">Rogue</option>
+						<option value="oppShaman">Shaman</option>
+						<option value="oppWarlock">Warlock</option>
+						<option value="oppWarrior">Warrior</option>
+					</select>
+				</p>
+				
+				<p>Your Deck:
+				<select name="userDeck" id="userDeckjs">
+					<option value="noDeck">No Deck</option>
+					<script src="userDecks.js"></script>
+				</select></p>
+				
+				<p>Opponent Deck Archetype:
+				<select name="oppArch" id="oppArchjs">
+					<option value="noOppDeck">No Deck/Unknown</option>
+					<script src="oppArch.js"></script>
+				</select></p>
+				
+				<p>
+					Win:<input type="radio" name="wl" id="winjs" checked>
+					Loss:<input type="radio" name="wl" id="lossjs">
+				</p>
+				
+				<button type="button" onclick="newGame.js">Submit</button>
+			</form>
+		</div>
+		<div class="sideBar">
+			<div class="login">
+			</div>
+			<div class="sideLinks">
+			</div>
+			<div class="social">
+			</div>
+		</div>
+		<div class="foot">
+		</div>
+	</body>
+</html>
